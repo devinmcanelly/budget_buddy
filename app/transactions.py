@@ -6,7 +6,7 @@ import datetime as dt
 # TODO
 
 
-class transaction:
+class Transaction:
     def __init__(self, id, amount, account, date, memo, category, payee):
         self.id = id = None
         self.amount = amount
@@ -16,8 +16,9 @@ class transaction:
         self.category = category
         self.payee = payee
     
-    def record():
-        print("test")
+    def record(self):
+       print(self)
+       #write to db
 
 
 
