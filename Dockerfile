@@ -1,4 +1,7 @@
 FROM continuumio/miniconda3
-RUN conda install openpyxl pandas jupyterlab
-ADD budget.xlsx app.py .
-ENTRYPOINT ["/bin/bash"] 
+RUN conda install openpyxl ipython
+# later pandas jupyterlab 
+ADD app/ /app
+WORKDIR /app
+RUN chmod -R 777 /app
+ENTRYPOINT ["ipython"] 

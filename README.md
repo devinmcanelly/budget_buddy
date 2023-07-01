@@ -1,7 +1,7 @@
 # Coding your budget
 
 Currently you have a spreadsheet that is as out of date as the day you made it.
-
+git push --set-upstream git@gitlab.com:devinmcanelly/$(git rev-parse --show-toplevel | xargs basename).git $(git rev-parse --abbrev-ref HEAD)
 
 # Navigate workbook.
 
