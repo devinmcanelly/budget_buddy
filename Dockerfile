@@ -4,4 +4,4 @@ RUN conda install openpyxl ipython
 ADD app/ /app
 WORKDIR /app
 RUN chmod -R 777 /app
-ENTRYPOINT ["ipython"] 
+CMD ["ipython", "main.py"] 
