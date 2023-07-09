@@ -1,4 +1,4 @@
-
+import db
 import datetime as dt
 
 
@@ -7,8 +7,7 @@ import datetime as dt
 
 
 class Transaction:
-    def __init__(self, id, amount, account, date, memo, category, payee):
-        self.id = id = None
+    def __init__(self, amount, account, date, memo, category, payee):
         self.amount = amount
         self.account = account
         self.date = date
@@ -16,13 +15,13 @@ class Transaction:
         self.category = category
         self.payee = payee
     
-    def record(self):
-       print(self)
-       #write to db
-
-
-
-# transaction_0 = main.transaction(0, 150.23, "Checking", datetime.date.today(), "testing memo", "testing category", "test payee")
-
+    # def new(self):
+    #    db.record(self)
+    
+    
+    def update(self):
+        print(self)
+        # updates an already input transaction and records a new entry
+        # I'm not sure yet what the logic of the update is going  to be.
 
 # def record_transaction wb.append('transaction column, withdrawal_0')

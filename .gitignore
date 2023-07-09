@@ -1,3 +1,4 @@
 *.xlsx
 .ipynb_checkpoints/
 __pycache__/
+budget.db

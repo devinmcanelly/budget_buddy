@@ -1,7 +1,9 @@
-import sqlite3
 import usr_input as ui
+import db
 
 
-# create and initialize db before moving to db.py
+db.initialize()
+
+# ui.menu()
 
 ui.get_new()
