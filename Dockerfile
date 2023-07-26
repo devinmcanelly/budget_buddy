@@ -1,7 +1,7 @@
-FROM continuumio/miniconda3
-RUN conda install openpyxl ipython
-# later pandas jupyterlab 
+FROM quay.io/devinmcanelly/pydevbase 
+COPY requirements.txt .
+RUN pip3 install -r requirements.txt  
 ADD app/ /app
 WORKDIR /app
 RUN chmod -R 777 /app
-CMD ["ipython", "main.py"] 
+CMD ["ipython", "main.py"]
