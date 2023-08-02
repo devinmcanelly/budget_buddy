@@ -1,0 +1,4 @@
+ipython
+openpyxl
+pandas
+jupyterlab

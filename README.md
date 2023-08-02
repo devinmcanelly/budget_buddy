@@ -1,7 +1,8 @@
 # Coding your budget
 
+
+
 Currently you have a spreadsheet that is as out of date as the day you made it.
-git push --set-upstream git@gitlab.com:devinmcanelly/$(git rev-parse --show-toplevel | xargs basename).git $(git rev-parse --abbrev-ref HEAD)
 
 # Navigate workbook.
 
@@ -20,15 +21,15 @@ Absolutely, your plan sounds logical and well-structured. Here's a roadmap that 
 ### Phase 1: Basic Data Entry
 <s>1. **Set Up Environment**: Ensure that you have all the necessary libraries installed (`openpyxl`, `pandas`, etc.).</s>
 
-2. **Create a Function to Add Values to Spreadsheet**:
-    - Write a Python function that takes in values (e.g., transaction amount, category, date) as parameters.
+2. **Create a Function to Add Values to db and excel**:
+    - <s>Write a Python function that takes in values (e.g., transaction amount, category, date) as parameters.</s>
     - Use `openpyxl` to open your Excel file and add the values to the appropriate cells.
     - Save the changes to the Excel file.
 
 3. **Test Data Entry**:
     - Run your script and enter some sample data to ensure that the function is working correctly and that data is being saved to the Excel file.
+    - write a test to automate this.
 
-### Phase 2: Object-Oriented Design
 4. **Design Budget Class**:
     - Create a `Budget` class that represents your entire budget.
     - Define attributes for the class such as categories, total income, total expenses, etc.
@@ -41,10 +42,8 @@ Absolutely, your plan sounds logical and well-structured. Here's a roadmap that 
 
 6. **Design Account Class**:
     - Create an `Account` class that represents a bank account or other financial account.
-    - Define attributes such as account name, balance, transactions, etc.
+    - <s>Define attributes such as account name, balance, transactions, etc. </s>
     - Define methods for depositing, withdrawing, and transferring funds.
-
-### Phase 3: Data Analysis and Projections
 7. **Integrate Pandas for Data Analysis**:
     - Use Pandas to read the data from your Excel file into a DataFrame.
     - Perform analysis on the data, such as calculating averages, sums, etc.
@@ -52,8 +51,7 @@ Absolutely, your plan sounds logical and well-structured. Here's a roadmap that 
 
 8. **Visualize Data** (Optional):
     - Use a library like `matplotlib` to create graphs and charts based on your data.
-
-### Phase 4: Refinement and Testing
+    - Bake in some pivot tables when exporting. 
 9. **Refine and Organize Code**:
     - Organize your code into modules and packages for better structure and maintainability.
     - Refactor any redundant or inefficient code.
