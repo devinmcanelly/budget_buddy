@@ -2,8 +2,6 @@ ipython
 openpyxl
 pandas
 jupyterlab
-ipython
-pandas
 sqlalchemy
 numpy
 

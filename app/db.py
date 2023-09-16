@@ -1,6 +1,6 @@
 import sqlite3
 import transactions
-
+import sqlalchemy as sqla
 
 def initialize():
     con = sqlite3.connect("budget.db")
