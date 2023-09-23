@@ -17,9 +17,3 @@ def get_new():
     db.record(new)
     # TODO display matching db entry.
     
-    
-    
-# def retrieve_account_info
-
-
-# def create account

@@ -1,19 +1,19 @@
 import sqlite3
 import transactions
-import sqlalchemy as sqla
 
 def initialize():
-    con = sqlite3.connect("budget.db")
+    print("Initalizing db")
+    con = sqlite3.connect("data/budget.db")
     cur = con.cursor()
 
     # Create table if not exists
 
     cur.execute('''
         CREATE TABLE IF NOT EXISTS accounts(
-            account_id INTEGER NOT NULL PRIMARY KEY,
+            id INTEGER NOT NULL PRIMARY KEY,
             balance REAL,
-            account_type TEXT,
-            account_name TEXT
+            type TEXT,
+            name TEXT
             
         );
                 ''')
@@ -21,12 +21,12 @@ def initialize():
         CREATE TABLE IF NOT EXISTS transactions(
             transaction_id INTEGER NOT NULL PRIMARY KEY,
             amount REAL,
-            account_id INTEGER,
+            acct_id INTEGER,
             date TEXT,
             memo TEXT,
             category TEXT, 
             payee TEXT,
-            FOREIGN KEY (account_id) REFERENCES accounts(account_id)
+            FOREIGN KEY (acct_id) REFERENCES accounts(id)
         );
     """)
     con.commit()
@@ -34,12 +34,17 @@ def initialize():
 
 
 def record(self):
-    con = sqlite3.connect("budget.db")
+    con = sqlite3.connect("data/budget.db")
     cur = con.cursor()
+    
+   # Missing logic to update account balance
+   #  ammount could be the increment, the +/- indicating direction.
+    
+    
     query = """
-                INSERT INTO transactions (amount, account_id, date, memo, category, payee)
+                INSERT INTO transactions (amount, acct_id, date, memo, category, payee)
                 VALUES (?, ?, ?, ?, ?, ?)
-    """
+    """ 
     cur.execute(query, (self.amount, self.account, self.date, self.memo, self.category, self.payee))
     con.commit()
     con.close()

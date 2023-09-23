@@ -1,9 +1,12 @@
 import usr_input as ui
 import db
+import os.path
 
-db.initialize()
-# account creation 
-# app starts up and checks for records, if none start account initialization. O
-# ui.menu()
 
-ui.get_new()
+db_path = "data/budget.db"
+
+if os.path.exists(db_path):
+    ui.get_new()
+else:
+    db.initialize()
+    ui.get_new()
