@@ -9,4 +9,5 @@ if os.path.exists(db_path):
     ui.get_new()
 else:
     db.initialize()
+    ui.make_acct
     ui.get_new()
