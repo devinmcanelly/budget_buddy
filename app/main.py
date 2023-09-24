@@ -1,7 +1,7 @@
 import usr_input as ui
 import db
 import os.path
-
+import foo # This isn't a good sign.
 
 db_path = "data/budget.db"
 
