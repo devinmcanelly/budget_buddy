@@ -4,3 +4,5 @@ __pycache__/
 *.db
 .idea/
 data/
+foo.py
+scratch.py

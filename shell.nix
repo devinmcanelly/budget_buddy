@@ -7,7 +7,6 @@ pkgs.mkShell {
       ps.flask
       ps.openpyxl
       ps.pandas
-      # ps.sqlalchemy
       ps.ipython
       ps.numpy
     ]))
