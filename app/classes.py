@@ -22,8 +22,7 @@ class Account:
         self.acct_type = acct_type
         self.name = name
         self.date = date
-    def update(self, balance, acct_id):
+    def update(self, balance):
         self.balance = balance
-        self.acct_id = acct_id
 
     
